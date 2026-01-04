@@ -1,4 +1,4 @@
-#Jellify – Nail Business Website
+# Jellify – Nail Business Website
 A full‑stack Flask web application built for a home‑based nail technician.
 
 Overview
