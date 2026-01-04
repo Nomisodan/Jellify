@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<!--Thank you message that appear on a different page letting you know that the appointment has been registered-->
+<body id="thank-you">
+    <div class="container">
+        <div class="thank-you-message">
+            <h1>Thank You!</h1>
+            <p>Thank you, <strong>{{ name }}</strong>, for booking your <strong>{{ service }}</strong> appointment!</p>
+            <p>Your appointment is scheduled for <strong>{{ appointment_date }} at {{ appointment_time }}</strong>.</p>
+            <p>We look forward to seeing you soon!</p>
+        </div>
+        <a href="{{ url_for('home') }}" class="btn">Back to Homepage</a>
+    </div>
+</body>
+</html>

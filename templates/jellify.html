@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jellify</title>
+    <!--Favicon-->
+    <link rel="icon" type="image/x-icon" href="static/Jellify.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</head>
+
+    <!--I didn't create a js file just because this is the on js code-->
+    <!--Video use to get the change from transparent to black in the navigation bar when scroling down-->
+    <!--https://www.youtube.com/watch?v=kmmxxfyufLE&t=58s-->
+    <script>
+        window.addEventListener('scroll', function() {
+          var navbar = document.getElementById('navbar');
+          var scrollPosition = window.scrollY;
+
+          if (scrollPosition > 100) {
+            navbar.classList.add('bg-dark', 'shadow');
+          } else {
+            navbar.classList.remove('bg-dark', 'shadow');
+          }
+        });
+    </script>
+<!--I used this template to start-->
+<!--https://codepen.io/evakoops/pen/PQMbar-->
+
+<body>
+    <!--Navigation bar-->
+    <nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
+        <div class="container-fluid">
+            <!-- Logo aligned to the left -->
+            <img src="{{ url_for('static', filename='Jellify.png') }}" alt="Jellify Logo" class="logonavbar" aria-label="Jellify Logo" style="max-height: 50px;">
+            <!--Phone Navigation bar-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!--Navigation button-->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#box1">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#booknow">Book Now</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--First Box that spells Jellify your nails-->
+    <div id="box1">
+        <div class="text">
+            <h1>
+                <span>J</span>
+                <span>E</span>
+                <span>L</span>
+                <span>L</span>
+                <span>I</span>
+                <span>F</span>
+                <span>Y</span>
+            </h1>
+            <h2>
+                <span>Y</span>
+                <span>O</span>
+                <span>U</span>
+                <span>R</span>
+                <span>&nbsp;</span>
+                <span>N</span>
+                <span>A</span>
+                <span>I</span>
+                <span>L</span>
+                <span>S</span>
+            </h2>
+        </div>
+    </div>
+
+    <!--Second box for general info-->
+    <a name="about"></a>
+    <div id="box2">
+        <div class="texts">
+            <h1>Hi, I'm Monika</h1>
+            <p>Welcome to Jellify. Little salon<br>
+                Situtated in Airdrie, Alberta. <br>
+                Come and treat yourself with wonderful nails.</p>
+        </div>
+    </div>
+
+    <!--Third box for service using tables-->
+    <a name="services"></a>
+    <div id="box3">
+        <div class="texts">
+            <h1>Services</h1>
+            <!--First table-->
+            <h2>Manicure</h2>
+            <h3>Includes nail cleaning, colour application & Massage</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Regular</td>
+                        <td>20$</td>
+                    </tr>
+                    <tr>
+                        <td>Gel</td>
+                        <td>35$</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!--Second Table-->
+            <h2>New Sets</h2>
+            <h3>Includes nail extensions, colour application & massage</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Acrylic</td>
+                        <td>40$</td>
+                    </tr>
+                    <tr>
+                        <td>UV Gel</td>
+                        <td>50$</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!--Third Table-->
+            <h2>Refills</h2>
+            <h3>Includes nail sets refill, colour application & massage</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Acrylic</td>
+                        <td>30$</td>
+                    </tr>
+                    <tr>
+                        <td>UV Gel</td>
+                        <td>40$</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!--Fourth box to create an appointment-->
+    <a name="booknow"></a>
+    <div id="box4">
+        <div class="container">
+            <div class="form-header">
+                <h2>Book an Appointment</h2>
+                <p>Please fill out the form below to schedule your appointment.</p>
+            </div>
+
+            <!--Message when the time is colliding with another user-->
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+            <div class="alert-container">
+                {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">
+                    {{ message }}
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+            {% endwith %}
+
+            <!--Form for appointments-->
+            <form action="/" method="POST">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input type="tel" class="form-control" id="phone" name="phone" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="service" class="form-label">Select Service</label>
+                    <select class="form-select" id="service" name="service" required>
+                        <option value="manicure">Manicure</option>
+                        <option value="new_sets">New Sets</option>
+                        <option value="refills">Refills</option>
+                    </select>
+                </div>
+
+                <!--Calendar with a placeholder so that the date can't be in the past-->
+                <div class="mb-3">
+                    <label for="appointment_date" class="form-label">Preferred Appointment Date</label>
+                    <input type="date" class="form-control" id="appointment_date" name="appointment_date" min="{{ today }}" required>
+                </div>
+
+                <!--Time with specific choice using jinja-->
+                <div class="mb-3">
+                    <label for="appointment_time" class="form-label">Preferred Appointment Time</label>
+                    <select class="form-select" id="appointment_time" name="appointment_time" required>
+                        {% for time in time_slots %}
+                        <option value="{{ time }}">{{ time }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <!--Terms and conditions checkbox with a link to flask-->
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="terms" name="terms" required>
+                    <label class="form-check-label" for="terms">I agree to the <a href="/terms">terms and conditions</a></label>
+                </div>
+
+                <button type="submit" class="btn btn-book w-100">Book Appointment</button>
+            </form>
+        </div>
+    </div>
+
+    <!--Fifthe box for ways to reach and see social media-->
+    <a name="contact"></a>
+    <div id="box5">
+        <div class="texts">
+            <h1>Contact</h1>
+            <h2>Phone Number: (514) 262-2625</h2>
+            <img src="static/qr-code.png" alt="QR Code" id="qrcode" />
+        </div>
+    </div>
+  </body>
+</html>
